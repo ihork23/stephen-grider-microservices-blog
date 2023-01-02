@@ -24,6 +24,7 @@ app.post('/posts', async (req, res) => {
     type: 'PostCreated',
     data: {id, title}
   })
+  console.log('posts - created', posts[id])
   
   res.status(201).send(posts[id])
 })
